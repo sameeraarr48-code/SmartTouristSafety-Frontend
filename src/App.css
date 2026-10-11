@@ -1,0 +1,4654 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1d2939;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 255px;
+  background: #112b3c;
+  color: white;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 21px;
+  margin: 0;
+}
+
+.tagline {
+  color: #b5c7d3;
+  font-size: 12px;
+  margin: 10px 0 35px;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 10px;
+}
+
+.nav-item {
+  border: none;
+  background: transparent;
+  color: #d4e0e8;
+  text-align: left;
+  padding: 13px 12px;
+  border-radius: 9px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #246b67;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  color: #b5c7d3;
+  font-size: 13px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px 40px;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.topbar h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.topbar p {
+  color: #748094;
+  margin: 0;
+  font-size: 14px;
+}
+
+.profile {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hero {
+  background: linear-gradient(120deg, #174b50, #287d76);
+  color: white;
+  border-radius: 20px;
+  padding: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-height: 260px;
+}
+
+.eyebrow {
+  color: #b8eee1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h2 {
+  font-size: clamp(25px, 3vw, 36px);
+  max-width: 490px;
+  margin: 15px 0;
+  line-height: 1.25;
+}
+
+.hero p {
+  color: #d7eeea;
+  line-height: 1.7;
+  max-width: 470px;
+  font-size: 14px;
+}
+
+.hero-icon {
+  font-size: 95px;
+  padding: 20px;
+}
+
+.primary-btn {
+  border: none;
+  background: #f4c96b;
+  color: #173b3b;
+  padding: 13px 18px;
+  border-radius: 9px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.primary-btn:hover {
+  background: #ffda8a;
+}
+
+.section-title {
+  font-size: 21px;
+  margin: 32px 0 18px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e7ebf1;
+  padding: 23px;
+  border-radius: 15px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-icon {
+  font-size: 30px;
+}
+
+.card h3 {
+  font-size: 17px;
+  margin: 16px 0 9px;
+}
+
+.card p {
+  color: #748094;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 40px;
+}
+
+.card button {
+  background: transparent;
+  border: none;
+  padding: 8px 0 0;
+  color: #18766e;
+  font-weight: 700;
+}
+
+.content-panel {
+  background: white;
+  padding: 45px 30px;
+  border-radius: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.panel-icon {
+  font-size: 45px;
+}
+
+.content-panel p {
+  color: #748094;
+  line-height: 1.7;
+}
+
+.content-panel .hint {
+  font-size: 13px;
+}
+
+footer {
+  color: #8791a2;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 800px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    font-size: 12px;
+  }
+
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .main-content {
+    padding: 22px 16px;
+  }
+
+  .hero {
+    padding: 25px;
+  }
+
+  .hero-icon {
+    font-size: 48px;
+    padding: 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-icon {
+    display: none;
+  }
+
+  .topbar h1 {
+    font-size: 23px;
+  }
+}
+/* Login and registration pages */
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+}
+
+.auth-brand {
+  background: linear-gradient(145deg, #112b3c, #207c73);
+  color: white;
+  padding: 65px 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-logo {
+  font-size: 40px;
+}
+
+.auth-brand h1 {
+  font-size: 34px;
+  margin: 15px 0 8px;
+}
+
+.auth-brand p {
+  color: #d5e9e7;
+  line-height: 1.7;
+}
+
+.auth-illustration {
+  font-size: 100px;
+  margin: 35px 0 10px;
+}
+
+.auth-brand h2 {
+  font-size: 27px;
+  margin-bottom: 0;
+}
+
+.auth-form-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 25px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 410px;
+}
+
+.auth-form h2 {
+  font-size: 30px;
+  margin: 18px 0 10px;
+}
+
+.auth-subtitle {
+  color: #748094;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.auth-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 19px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 9px;
+  border: 1px solid #dce3e9;
+  border-radius: 9px;
+  outline: none;
+  font: inherit;
+}
+
+.auth-form input:focus {
+  border-color: #287d76;
+  box-shadow: 0 0 0 3px #287d761c;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 9px;
+  background: #207c73;
+  color: white;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.auth-submit:hover {
+  background: #185e58;
+}
+
+.auth-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #748094;
+}
+
+.auth-switch button {
+  background: none;
+  border: none;
+  color: #18766e;
+  font-weight: 700;
+}
+
+.auth-note {
+  text-align: center;
+  color: #8993a2;
+  font-size: 12px;
+  margin-top: 35px;
+}
+
+.auth-error {
+  color: #b42318;
+  background: #fff0ef;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.auth-success {
+  color: #176b43;
+  background: #eaf8ef;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.logout-btn {
+  border: 1px solid #718b99;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: transparent;
+  color: white;
+}
+
+@media (max-width: 750px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-brand {
+    padding: 30px;
+  }
+
+  .auth-illustration {
+    display: none;
+  }
+
+  .auth-brand h2 {
+    font-size: 22px;
+  }
+
+  .auth-form-area {
+    padding: 40px 24px;
+  }
+}
+
+/* FIX INCIDENT FORM LAYOUT */
+
+.incident-panel {
+  width: 100%;
+  max-width: 760px;
+  margin: 25px auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(20, 45, 60, 0.08);
+  text-align: left;
+}
+
+.incident-panel > .panel-icon {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.incident-panel > h2 {
+  text-align: center;
+  font-size: 26px;
+  margin: 0 0 12px;
+}
+
+.incident-panel > p {
+  text-align: center;
+  color: #748094;
+  margin-bottom: 25px;
+}
+
+.incident-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+}
+
+.incident-form label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 9px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #253746;
+}
+
+.incident-form input,
+.incident-form select,
+.incident-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d5dfe5;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #263746;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.incident-form select {
+  min-height: 46px;
+}
+
+.incident-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.incident-form input:focus,
+.incident-form select:focus,
+.incident-form textarea:focus {
+  outline: none;
+  border-color: #207c73;
+  box-shadow: 0 0 0 3px rgba(32, 124, 115, 0.12);
+}
+
+.incident-form .auth-submit {
+  width: 100%;
+  margin-top: 0;
+  padding: 15px;
+  border: none;
+  border-radius: 9px;
+  background: #207c73;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.incident-form .auth-submit:hover {
+  background: #185e58;
+}
+
+@media (max-width: 600px) {
+  .incident-panel {
+    padding: 22px 16px;
+  }
+
+  .incident-panel > h2 {
+    font-size: 22px;
+  }
+}
+
+
+.trips-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.refresh-btn {
+  border: 1px solid #d5dfe5;
+  background: white;
+  color: #207c73;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.delete-trip-btn {
+  display: block;
+  margin-top: 12px;
+  color: #b42318 !important;
+}
+
+.empty-message {
+  color: #748094;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Separate Admin Dashboard */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f6fb;
+  color: #183247;
+}
+
+.admin-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #102d40;
+  color: white;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sidebar h2 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.admin-sidebar p {
+  color: #b9cedb;
+  margin-bottom: 35px;
+}
+
+.admin-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-sidebar nav button,
+.admin-logout {
+  border: none;
+  padding: 14px;
+  border-radius: 9px;
+  text-align: left;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  background: transparent;
+}
+
+.admin-sidebar nav button:hover,
+.admin-sidebar nav .admin-nav-active {
+  background: #24756f;
+}
+
+.admin-logout {
+  margin-top: auto;
+  background: #a94442;
+}
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+  padding: 35px;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.admin-header p {
+  color: #668094;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.admin-header h1 {
+  margin-top: 8px;
+  font-size: 30px;
+}
+
+.admin-header span {
+  background: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+}
+
+.admin-welcome {
+  background: #dff1ed;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 25px;
+}
+
+.admin-welcome h2 {
+  margin-bottom: 10px;
+}
+
+.admin-welcome p {
+  line-height: 1.7;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.admin-stat-card,
+.admin-info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(20, 45, 65, 0.05);
+}
+
+.admin-stat-card span {
+  font-size: 28px;
+}
+
+.admin-stat-card p {
+  color: #668094;
+  margin: 12px 0;
+}
+
+.admin-stat-card h2 {
+  font-size: 32px;
+}
+
+.admin-info-card {
+  margin-top: 25px;
+}
+
+.admin-info-card p {
+  margin: 15px 0;
+  color: #668094;
+}
+
+.admin-info-card button {
+  background: #f5c967;
+  color: #183247;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 8px 10px 0 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: auto;
+  }
+
+  .admin-main {
+    padding: 20px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== ADMIN USERS TABLE ===== */
+
+.admin-info-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(16, 45, 64, 0.08);
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.admin-info-card h2 {
+  color: #16364a;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.admin-info-card > p {
+  color: #718096;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* Table wrapper */
+.admin-info-card div[style*="overflow-x"] {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5edf2;
+  border-radius: 12px;
+}
+
+/* Table */
+.admin-info-card table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-size: 14px;
+  text-align: left;
+}
+
+.admin-info-card thead {
+  background: #edf6f5;
+}
+
+.admin-info-card th {
+  padding: 17px 20px;
+  color: #234c5b;
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom: 1px solid #dce9e9;
+}
+
+.admin-info-card td {
+  padding: 17px 20px;
+  color: #465c6b;
+  border-bottom: 1px solid #edf1f4;
+  white-space: nowrap;
+}
+
+.admin-info-card tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-info-card tbody tr:hover {
+  background: #f5fbfa;
+}
+
+/* User ID */
+.admin-info-card td:first-child {
+  color: #7a8c9a;
+  font-weight: 600;
+}
+
+/* Role badges */
+.admin-info-card td:last-child {
+  font-weight: 700;
+}
+
+.admin-info-card td:last-child:has(+ td) {
+  font-weight: 600;
+}
+
+.admin-info-card tbody tr td:last-child {
+  color: #24756f;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .admin-info-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .admin-info-card h2 {
+    font-size: 21px;
+  }
+
+  .admin-info-card th,
+  .admin-info-card td {
+    padding: 13px 14px;
+  }
+}
+
+
+
+
+/* SmartTourist login page layout fix */
+
+.auth-container {
+  width: 100%;
+  max-width: 1350px;
+  min-height: 78vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(16, 45, 64, 0.08);
+}
+
+.auth-brand {
+  min-height: 600px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(145deg, #103747, #176d68, #21877c);
+}
+
+.auth-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px clamp(28px, 5vw, 75px);
+  background: white;
+}
+
+.auth-form-panel h2 {
+  color: #18384b;
+}
+
+.auth-form-panel input {
+  background: #f5f8fa !important;
+  color: #183247 !important;
+  border: 1px solid #dce6eb !important;
+}
+
+.auth-form-panel input:focus {
+  border-color: #21877c !important;
+  box-shadow: 0 0 0 3px rgba(33, 135, 124, 0.12);
+}
+
+@media (max-width: 760px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-brand {
+    min-height: 300px;
+    padding: 30px 20px;
+  }
+
+  .auth-form-panel {
+    padding: 30px 24px;
+  }
+}
+
+.admin-role-badge,
+.tourist-role-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.admin-role-badge {
+  color: #6542a6;
+  background: #f0eaff;
+}
+
+.tourist-role-badge {
+  color: #19745f;
+  background: #e1f6ed;
+}
+
+
+/* Admin incident table improvements */
+.admin-info-card table {
+  min-width: 850px;
+}
+
+.admin-info-card div[style*="overflow-x"] {
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.admin-info-card th,
+.admin-info-card td {
+  white-space: nowrap;
+}
+
+.admin-info-card td:nth-child(3) {
+  white-space: normal;
+  min-width: 220px;
+}
+
+
+.trip-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e5f5ee;
+  color: #16794b;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+
+/* ===== DARK THEME: ADMIN DASHBOARD ONLY ===== */
+
+.admin-layout {
+  background: #0b1220 !important;
+  color: #e5edf7;
+}
+
+.admin-main {
+  background: #0b1220 !important;
+  color: #e5edf7;
+}
+
+.admin-header h1 {
+  color: #f1f5f9 !important;
+}
+
+.admin-header p {
+  color: #94a3b8;
+}
+
+.admin-header span {
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+/* Welcome banner */
+.admin-layout .admin-welcome,
+.admin-layout .admin-main > section:first-of-type {
+  background: #142b3a;
+  color: #f1f5f9;
+}
+
+/* Dashboard statistics */
+.admin-layout .admin-stat-card {
+  background: #172337 !important;
+  color: #e5edf7 !important;
+  border: 1px solid #29384e;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.admin-layout .admin-stat-card p {
+  color: #a9bbd0 !important;
+}
+
+.admin-layout .admin-stat-card h2 {
+  color: #f8fafc !important;
+}
+
+/* Content cards and tables */
+.admin-layout .admin-info-card {
+  background: #172337 !important;
+  color: #e5edf7 !important;
+  border: 1px solid #29384e;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.admin-layout .admin-info-card h2 {
+  color: #f1f5f9 !important;
+}
+
+.admin-layout .admin-info-card > p {
+  color: #a9bbd0 !important;
+}
+
+.admin-layout .admin-info-card table {
+  background: #172337 !important;
+  color: #e5edf7 !important;
+}
+
+.admin-layout .admin-info-card thead {
+  background: #20364b !important;
+}
+
+.admin-layout .admin-info-card th {
+  color: #e2eaf4 !important;
+  border-bottom: 1px solid #35465b !important;
+}
+
+.admin-layout .admin-info-card td {
+  color: #d0dceb !important;
+  border-bottom: 1px solid #29384e !important;
+}
+
+.admin-layout .admin-info-card tbody tr {
+  background: #172337 !important;
+}
+
+.admin-layout .admin-info-card tbody tr:nth-child(even) {
+  background: #1b2a40 !important;
+}
+
+.admin-layout .admin-info-card tbody tr:hover {
+  background: #253a50 !important;
+}
+
+/* Quick management buttons */
+.admin-layout .admin-info-card button {
+  background: #0f766e;
+  color: #ffffff;
+  border: none;
+}
+
+.admin-layout .admin-info-card button:hover {
+  background: #115e59;
+}
+
+/* Inputs and dropdowns */
+.admin-layout input,
+.admin-layout select,
+.admin-layout textarea {
+  background: #0f1b2d;
+  color: #e5edf7;
+  border: 1px solid #35465b;
+}
+
+.admin-layout input::placeholder,
+.admin-layout textarea::placeholder {
+  color: #8496ad;
+}
+
+/* Incident status badges */
+.admin-layout .trip-status {
+  background: #164e3a;
+  color: #a7f3d0;
+}
+
+/* Remove white edges around the Admin Dashboard */
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body:has(.admin-layout) {
+  background: #0b1220 !important;
+}
+
+#root:has(.admin-layout) {
+  background: #0b1220;
+  min-height: 100vh;
+}
+
+.admin-layout {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.admin-main {
+  box-sizing: border-box;
+}
+
+/* Remove white outer edges from the entire application */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Admin and Tourist dashboards fill the viewport */
+.admin-layout,
+.dashboard-layout {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Keep the dark background for the Admin Dashboard */
+body:has(.admin-layout),
+#root:has(.admin-layout) {
+  background: #0b1220 !important;
+}
+
+/* Remove inherited outer spacing from the main layouts */
+.admin-main,
+.dashboard-main {
+  box-sizing: border-box;
+}
+
+
+/* ===== SMART TOURIST LOGIN PAGE ===== */
+
+.auth-page {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Left side: Real travel landscape */
+.auth-brand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 55px;
+  color: #ffffff;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(7, 25, 43, 0.25),
+      rgba(7, 25, 43, 0.78)
+    ),
+    url("/travel-landscape.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
+.auth-brand > * {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-brand h1 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 750;
+  margin: 12px 0;
+}
+
+.auth-brand h2 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px 0 12px;
+}
+
+.auth-brand p {
+  color: #f1f5f9;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+.auth-logo {
+  font-size: 42px;
+}
+
+.auth-illustration {
+  display: none;
+}
+
+/* Right side: Login form */
+.auth-form-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #ffffff;
+  min-width: 0;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.auth-form .eyebrow {
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.auth-form h2 {
+  color: #172b3a;
+  font-size: 34px;
+  font-weight: 750;
+  margin: 16px 0 10px;
+}
+
+.auth-subtitle {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-brand {
+    min-height: 280px;
+    padding: 30px;
+  }
+
+  .auth-brand h1 {
+    font-size: 30px;
+  }
+
+  .auth-brand h2 {
+    font-size: 25px;
+  }
+
+  .auth-form-area {
+    padding: 35px 24px;
+  }
+}
+
+/* ===== LOGIN FORM: CLEAN PREMIUM DESIGN ===== */
+
+.auth-form-area {
+  background: #ffffff !important;
+  padding: 40px 55px !important;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 440px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.auth-form .eyebrow {
+  display: block;
+  color: #0f766e !important;
+  font-size: 11px !important;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.auth-form h2 {
+  color: #172b3a !important;
+  font-size: 34px !important;
+  font-weight: 750 !important;
+  line-height: 1.25;
+  margin: 0 0 10px !important;
+}
+
+.auth-form .auth-subtitle {
+  color: #718096 !important;
+  font-size: 15px;
+  margin: 0 0 30px !important;
+  line-height: 1.6;
+}
+
+/* Labels */
+.auth-form label {
+  display: block;
+  color: #334155 !important;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* White email and password fields */
+.auth-form input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 52px;
+  padding: 0 16px !important;
+  background: #ffffff !important;
+  color: #172b3a !important;
+  border: 1px solid #dce3e9 !important;
+  border-radius: 9px !important;
+  font-size: 14px;
+  outline: none;
+  box-shadow: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-form input::placeholder {
+  color: #9aa5b1 !important;
+  opacity: 1;
+}
+
+.auth-form input:focus {
+  border-color: #16877e !important;
+  box-shadow: 0 0 0 3px rgba(22, 135, 126, 0.12) !important;
+}
+
+/* Form spacing */
+.auth-form > div {
+  margin-bottom: 20px;
+}
+
+/* Sign In / Create Account button */
+.auth-form button[type="submit"],
+.auth-form .auth-submit {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 8px;
+  background: linear-gradient(135deg, #16877e, #0f766e) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 9px !important;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(15, 118, 110, 0.16);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.auth-form button[type="submit"]:hover,
+.auth-form .auth-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 118, 110, 0.22);
+}
+
+/* Links below the form */
+.auth-form a {
+  color: #0f766e !important;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .auth-form-area {
+    padding: 35px 24px !important;
+  }
+
+  .auth-form h2 {
+    font-size: 29px !important;
+  }
+}
+
+/* ===== BLUE THEME FOR LOGIN FORM ===== */
+
+.auth-form .eyebrow {
+  color: #2563a6 !important;
+}
+
+.auth-form button[type="submit"],
+.auth-form .auth-submit {
+  background: linear-gradient(135deg, #2878b8, #174a7e) !important;
+  color: #ffffff !important;
+  box-shadow: 0 5px 14px rgba(23, 74, 126, 0.18);
+}
+
+.auth-form button[type="submit"]:hover,
+.auth-form .auth-submit:hover {
+  box-shadow: 0 8px 18px rgba(23, 74, 126, 0.28);
+}
+
+.auth-form a {
+  color: #2563a6 !important;
+}
+
+.auth-form input:focus {
+  border-color: #2878b8 !important;
+  box-shadow: 0 0 0 3px rgba(40, 120, 184, 0.12) !important;
+}
+
+
+/* ==========================================
+   SMART TOURIST — WARM EDITORIAL REDESIGN
+   Tourist dashboard only
+   ========================================== */
+
+:root {
+  --travel-cream: #f7f3ec;
+  --travel-white: #fffdf9;
+  --travel-green: #354f43;
+  --travel-green-light: #e3eadb;
+  --travel-terracotta: #a64e30;
+  --travel-peach: #f8e0d1;
+  --travel-blue-light: #dcecf5;
+  --travel-text: #252820;
+  --travel-muted: #77776d;
+  --travel-border: #e9e1d6;
+}
+
+/* Main tourist application */
+
+.app {
+  background: var(--travel-cream);
+  color: var(--travel-text);
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* Sidebar */
+
+.app .sidebar {
+  background: #f1ece3;
+  color: var(--travel-text);
+  border-right: 1px solid var(--travel-border);
+  padding: 30px 14px;
+  flex-shrink: 0;
+}
+
+.app .sidebar h2 {
+  color: var(--travel-green);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.app .tagline {
+  color: var(--travel-muted);
+  line-height: 1.6;
+  margin-bottom: 34px;
+}
+
+.app .sidebar nav {
+  gap: 7px;
+}
+
+.app .nav-item {
+  color: #45483f;
+  border-radius: 9px;
+  padding: 13px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.app .nav-item:hover {
+  background: #e4e7dd;
+  color: var(--travel-green);
+}
+
+.app .nav-item.active {
+  background: var(--travel-green);
+  color: #ffffff;
+}
+
+.app .sidebar-bottom {
+  color: var(--travel-muted);
+  border-top: 1px solid #ded6ca;
+  padding-top: 20px;
+  line-height: 1.7;
+}
+
+/* Main content area */
+
+.app .main-content {
+  background: var(--travel-cream);
+  padding: 28px 30px;
+  min-width: 0;
+}
+
+.app .topbar {
+  margin-bottom: 24px;
+}
+
+.app .topbar h1 {
+  color: var(--travel-text);
+  font-size: 29px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.app .topbar p {
+  color: var(--travel-muted);
+  line-height: 1.6;
+}
+
+.app .profile {
+  background: var(--travel-white);
+  color: var(--travel-text);
+  border: 1px solid var(--travel-border);
+  border-radius: 30px;
+  padding: 11px 16px;
+  box-shadow: none;
+}
+
+/* Main travel banner with a real landscape photo */
+
+.app .hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #425b4b;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(22, 37, 29, 0.78) 0%,
+      rgba(22, 37, 29, 0.52) 48%,
+      rgba(22, 37, 29, 0.05) 100%
+    ),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85");
+  background-size: cover;
+  background-position: center 53%;
+  color: #ffffff;
+  min-height: 285px;
+  padding: 38px;
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.app .hero .eyebrow {
+  color: #f5d4bd;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.app .hero h2 {
+  color: #ffffff;
+  font-size: clamp(27px, 3vw, 39px);
+  font-weight: 750;
+  line-height: 1.16;
+  letter-spacing: -1px;
+  max-width: 510px;
+  margin: 14px 0;
+}
+
+.app .hero p {
+  color: #f6f3ec;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 460px;
+}
+
+.app .hero-icon {
+  font-size: 68px;
+  opacity: 0.9;
+}
+
+.app .primary-btn {
+  background: var(--travel-terracotta);
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 13px 20px;
+  font-size: 14px;
+  font-weight: 650;
+  box-shadow: none;
+}
+
+.app .primary-btn:hover {
+  background: #873d26;
+  transform: translateY(-1px);
+}
+
+/* Section headings */
+
+.app .section-title {
+  color: var(--travel-text);
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+  margin: 30px 0 17px;
+}
+
+/* Existing quick-action and information cards */
+
+.app .cards {
+  gap: 16px;
+}
+
+.app .card {
+  background: var(--travel-white);
+  border: 1px solid var(--travel-border);
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 2px 5px rgba(61, 48, 31, 0.025);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app .card:hover {
+  transform: translateY(-2px);
+  border-color: #c7cdbd;
+  box-shadow: 0 7px 18px rgba(61, 48, 31, 0.07);
+}
+
+.app .card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  min-height: 46px;
+  border-radius: 50%;
+  background: var(--travel-green-light);
+  color: var(--travel-green);
+  font-size: 25px;
+}
+
+.app .card:nth-child(4n + 2) .card-icon {
+  background: var(--travel-peach);
+  color: var(--travel-terracotta);
+}
+
+.app .card:nth-child(4n + 3) .card-icon {
+  background: var(--travel-blue-light);
+  color: #356b8a;
+}
+
+.app .card:nth-child(4n + 4) .card-icon {
+  background: #f8edcf;
+  color: #88651e;
+}
+
+.app .card h3 {
+  color: var(--travel-text);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 15px 0 8px;
+}
+
+.app .card p {
+  color: #65665e;
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 0;
+}
+
+.app .card button {
+  color: var(--travel-green);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.app .card button:hover {
+  color: var(--travel-terracotta);
+}
+
+/* Empty states and page panels */
+
+.app .content-panel {
+  background: var(--travel-white);
+  border: 1px solid var(--travel-border);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: none;
+}
+
+.app .content-panel h2,
+.app .content-panel h3 {
+  color: var(--travel-text);
+}
+
+.app .content-panel p,
+.app .content-panel .hint {
+  color: var(--travel-muted);
+}
+
+/* Trip refresh button and empty-state messages */
+
+.app .refresh-btn {
+  background: var(--travel-white);
+  color: var(--travel-green);
+  border: 1px solid #d8d9ce;
+  border-radius: 8px;
+}
+
+.app .refresh-btn:hover {
+  background: var(--travel-green-light);
+}
+
+.app .empty-message {
+  background: var(--travel-white);
+  border: 1px solid var(--travel-border);
+  color: var(--travel-muted);
+}
+
+/* Keep incident forms consistent with the new palette */
+
+.app .incident-panel {
+  background: var(--travel-white);
+  border: 1px solid var(--travel-border);
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(61, 48, 31, 0.045);
+}
+
+.app .incident-panel > h2 {
+  color: var(--travel-text);
+}
+
+.app .incident-form label {
+  color: #41443b;
+}
+
+.app .incident-form input,
+.app .incident-form select,
+.app .incident-form textarea {
+  background: #ffffff;
+  color: var(--travel-text);
+  border: 1px solid #dcd7cd;
+  border-radius: 8px;
+}
+
+.app .incident-form input:focus,
+.app .incident-form select:focus,
+.app .incident-form textarea:focus {
+  border-color: var(--travel-green);
+  box-shadow: 0 0 0 3px rgba(53, 79, 67, 0.12);
+}
+
+.app .incident-form .auth-submit {
+  background: var(--travel-green);
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.app .incident-form .auth-submit:hover {
+  background: #263d32;
+}
+
+/* Trip status */
+
+.app .trip-status {
+  background: #e3eadb;
+  color: #35543d;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* Footer */
+
+.app footer {
+  color: #89877c;
+}
+
+/* Responsive layout */
+
+@media (max-width: 800px) {
+  .app .main-content {
+    padding: 20px 16px;
+  }
+
+  .app .hero {
+    min-height: 250px;
+    padding: 26px;
+    background-position: center;
+  }
+
+  .app .hero h2 {
+    font-size: 29px;
+  }
+
+  .app .section-title {
+    font-size: 20px;
+  }
+
+  .app .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .app .hero {
+    min-height: 230px;
+    padding: 21px;
+  }
+
+  .app .hero h2 {
+    font-size: 25px;
+  }
+
+  .app .hero p {
+    font-size: 13px;
+  }
+
+  .app .profile {
+    white-space: normal;
+  }
+
+  .app .card {
+    padding: 18px;
+  }
+}
+
+/* ===== WARM TRAVEL THEME: LOGIN & REGISTER ===== */
+
+.auth-page {
+  background: #f7f3ec !important;
+  color: #252820;
+}
+
+/* Keep the real travel photograph */
+
+.auth-brand {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(26, 44, 34, 0.20),
+      rgba(26, 44, 34, 0.76)
+    ),
+    url("/travel-landscape.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  color: #fffdf9 !important;
+}
+
+.auth-brand h1,
+.auth-brand h2 {
+  color: #fffdf9 !important;
+}
+
+.auth-brand p {
+  color: #f6eee3 !important;
+}
+
+/* Warm, uncluttered form side */
+
+.auth-form-area {
+  background: #f7f3ec !important;
+  padding: 40px !important;
+}
+
+.auth-form {
+  background: #fffdf9 !important;
+  border: 1px solid #e9e1d6 !important;
+  border-radius: 16px !important;
+  padding: 38px !important;
+  max-width: 440px !important;
+  box-shadow: 0 8px 30px rgba(55, 45, 30, 0.05) !important;
+}
+
+/* Headings and description */
+
+.auth-form .eyebrow {
+  color: #a64e30 !important;
+  letter-spacing: 1.7px;
+}
+
+.auth-form h2 {
+  color: #252820 !important;
+  font-size: 32px !important;
+  font-weight: 750 !important;
+}
+
+.auth-form .auth-subtitle {
+  color: #77776d !important;
+}
+
+/* Form labels */
+
+.auth-form label {
+  color: #45483f !important;
+  font-weight: 600;
+}
+
+/* Inputs */
+
+.auth-form input {
+  background: #fffdf9 !important;
+  color: #252820 !important;
+  border: 1px solid #ded8cd !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.auth-form input::placeholder {
+  color: #96948a !important;
+}
+
+.auth-form input:focus {
+  border-color: #354f43 !important;
+  box-shadow: 0 0 0 3px rgba(53, 79, 67, 0.12) !important;
+}
+
+/* Sign in / Create account */
+
+.auth-form button[type="submit"],
+.auth-form .auth-submit {
+  background: #354f43 !important;
+  color: #ffffff !important;
+  border: 1px solid #354f43 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  transition: background 0.2s ease;
+}
+
+.auth-form button[type="submit"]:hover,
+.auth-form .auth-submit:hover {
+  background: #263d32 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Links */
+
+.auth-form a,
+.auth-form .auth-switch button {
+  color: #a64e30 !important;
+}
+
+.auth-form a:hover {
+  color: #873d26 !important;
+}
+
+/* Error and success messages */
+
+.auth-form .auth-error {
+  background: #fbe9e5;
+  color: #923c2b;
+}
+
+.auth-form .auth-success {
+  background: #e3eadb;
+  color: #35543d;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .auth-form-area {
+    padding: 25px 16px !important;
+  }
+
+  .auth-form {
+    padding: 26px 22px !important;
+  }
+
+  .auth-form h2 {
+    font-size: 28px !important;
+  }
+}
+
+/* ===== REMOVE THE GENERIC QUICK ACCESS BOX LOOK ===== */
+
+.app .cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  background: transparent;
+}
+
+.app .cards .card {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 16px;
+  padding: 19px 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ded8cd;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+}
+
+.app .cards .card:hover {
+  transform: none;
+  background: #eee9df;
+  border-color: #ded8cd;
+  box-shadow: none;
+}
+
+.app .cards .card .card-icon {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.app .cards .card h3 {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  margin: 0 0 3px;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.app .cards .card p {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.app .cards .card button {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  align-self: center;
+  white-space: nowrap;
+  padding: 8px;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .app .cards .card {
+    grid-template-columns: 42px minmax(0, 1fr);
+    column-gap: 12px;
+    padding: 16px 4px;
+  }
+
+  .app .cards .card button {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: start;
+    padding-left: 0;
+    margin-top: 5px;
+  }
+}
+
+/* ===== FINAL POLISH: SMART TOURIST ===== */
+
+/* Elegant typography */
+.app {
+  font-family: 'DM Sans', sans-serif;
+  color: #292b25;
+}
+
+/* Stylish page headings */
+.app .topbar h1,
+.app .section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #293d31;
+  letter-spacing: -0.5px;
+}
+
+.app .topbar h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.app .section-title {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* Refined sidebar branding */
+.app .sidebar h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 25px;
+  letter-spacing: -0.6px;
+}
+
+.app .tagline {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Make navigation feel more polished */
+.app .nav-item {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.app .nav-item.active {
+  background: #354f43;
+  box-shadow: inset 3px 0 #c9a16a;
+}
+
+/* Improve the hero heading */
+.app .hero h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(32px, 3vw, 43px);
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  max-width: 560px;
+}
+
+.app .hero .eyebrow {
+  letter-spacing: 2.2px;
+  font-size: 11px;
+}
+
+/* Quick action typography */
+.app .cards .card h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.app .cards .card p {
+  color: #696b61;
+}
+
+/* Make interactive elements feel consistent */
+.app button {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* ===== VISIBLE RED SIGN OUT BUTTON ===== */
+
+.app .logout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 12px;
+  padding: 11px 16px;
+
+  background: #a83f35 !important;
+  color: #ffffff !important;
+  border: 1px solid #a83f35 !important;
+  border-radius: 8px;
+
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.app .logout-btn:hover {
+  background: #873027 !important;
+  border-color: #873027 !important;
+  color: #ffffff !important;
+}
+
+/* Sidebar footer spacing */
+.app .sidebar-bottom {
+  padding-top: 20px;
+  line-height: 1.7;
+}
+
+/* Smaller screens */
+@media (max-width: 800px) {
+  .app .topbar h1 {
+    font-size: 29px;
+  }
+
+  .app .section-title {
+    font-size: 22px;
+  }
+
+  .app .hero h2 {
+    font-size: 30px;
+  }
+}
+
+/* =========================================
+   FIX LAYOUT + CONSISTENT TOURIST THEME
+   ========================================= */
+
+.app {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #292b25;
+}
+
+.app .main-content {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.app .topbar h1,
+.app .section-title {
+  font-family: "Playfair Display", Georgia, serif;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+}
+
+/* Restore normal content flow inside all cards.
+   This prevents multiple paragraphs from overlapping. */
+
+.app .cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+}
+
+.app .cards .card {
+  display: block;
+  min-width: 0;
+  text-align: left;
+  padding: 20px;
+  background: #fffdf9;
+  border: 1px solid #e9e1d6;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.app .cards .card .card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  margin-bottom: 10px;
+}
+
+.app .cards .card h3 {
+  display: block;
+  margin: 6px 0 8px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.app .cards .card p {
+  display: block;
+  grid-column: auto;
+  grid-row: auto;
+  min-height: 0;
+  margin: 8px 0;
+  color: #65665e;
+  font-size: 13px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.app .cards .card button {
+  display: inline-block;
+  grid-column: auto;
+  grid-row: auto;
+  margin-top: 8px;
+}
+
+/* Compact horizontal layout only for quick-action
+   cards that contain a button. */
+
+.app .cards .card:has(button) {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 13px;
+  row-gap: 3px;
+  padding: 17px 12px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ded8cd;
+  border-radius: 0;
+}
+
+.app .cards .card:has(button) .card-icon {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  margin: 0;
+}
+
+.app .cards .card:has(button) h3 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+}
+
+.app .cards .card:has(button) p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 3px 0 0;
+}
+
+.app .cards .card:has(button) button {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.app .cards .card:has(button):hover {
+  transform: none;
+  background: #eee9df;
+  box-shadow: none;
+}
+
+/* Readable destination and emergency service rows */
+
+.app .main-content a {
+  overflow-wrap: anywhere;
+}
+
+.app .content-panel,
+.app .incident-panel {
+  color: #292b25;
+}
+
+/* =========================================
+   ADMIN DASHBOARD — DARK FOREST THEME
+   ========================================= */
+
+.admin-layout,
+.admin-main {
+  background: #17251f !important;
+  color: #edf1e9 !important;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.admin-sidebar {
+  background: #101b17 !important;
+  color: #f5f3eb !important;
+  border-right: 1px solid #304238;
+}
+
+.admin-sidebar h2 {
+  color: #f5f3eb !important;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.admin-sidebar p {
+  color: #b6c4b7 !important;
+}
+
+.admin-sidebar nav button,
+.admin-logout {
+  color: #dbe4d9 !important;
+  border-radius: 8px;
+}
+
+.admin-sidebar nav button:hover,
+.admin-sidebar nav .admin-nav-active {
+  background: #354f43 !important;
+  color: #ffffff !important;
+}
+
+.admin-header h1 {
+  color: #f5f3eb !important;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.admin-header p {
+  color: #b6c4b7 !important;
+}
+
+.admin-header span {
+  background: #26372e !important;
+  color: #f5f3eb !important;
+  border: 1px solid #3b5044;
+}
+
+/* Admin welcome area */
+
+.admin-layout .admin-welcome,
+.admin-layout .admin-main > section:first-of-type {
+  background: #263b30 !important;
+  color: #f5f3eb !important;
+  border: 1px solid #3c5545;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.admin-layout .admin-welcome h2,
+.admin-layout .admin-welcome p {
+  color: #f5f3eb !important;
+}
+
+/* Statistics and management panels */
+
+.admin-layout .admin-stat-card,
+.admin-layout .admin-info-card {
+  background: #202f27 !important;
+  color: #edf1e9 !important;
+  border: 1px solid #35483c !important;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.admin-layout .admin-stat-card h2,
+.admin-layout .admin-info-card h2 {
+  color: #f5f3eb !important;
+}
+
+.admin-layout .admin-stat-card p,
+.admin-layout .admin-info-card > p,
+.admin-layout .admin-info-card p {
+  color: #bdc9bd !important;
+  line-height: 1.65;
+}
+
+/* Admin tables */
+
+.admin-layout .admin-info-card table {
+  background: #202f27 !important;
+  color: #edf1e9 !important;
+  border-collapse: collapse;
+}
+
+.admin-layout .admin-info-card thead {
+  background: #304638 !important;
+}
+
+.admin-layout .admin-info-card th {
+  background: #304638 !important;
+  color: #f5f3eb !important;
+  border-bottom: 1px solid #465c4d !important;
+}
+
+.admin-layout .admin-info-card td {
+  color: #dce5da !important;
+  border-bottom: 1px solid #35483c !important;
+}
+
+.admin-layout .admin-info-card tbody tr,
+.admin-layout .admin-info-card tbody tr:nth-child(even) {
+  background: #202f27 !important;
+}
+
+.admin-layout .admin-info-card tbody tr:hover {
+  background: #2b4033 !important;
+}
+
+/* Admin forms */
+
+.admin-layout input,
+.admin-layout select,
+.admin-layout textarea {
+  background: #17251f !important;
+  color: #f5f3eb !important;
+  border: 1px solid #46594b !important;
+  border-radius: 7px;
+}
+
+.admin-layout input::placeholder,
+.admin-layout textarea::placeholder {
+  color: #aab9ac !important;
+}
+
+.admin-layout input:focus,
+.admin-layout select:focus,
+.admin-layout textarea:focus {
+  outline: none;
+  border-color: #9cb58f !important;
+  box-shadow: 0 0 0 3px rgba(156, 181, 143, 0.12);
+}
+
+/* Admin action buttons */
+
+.admin-layout .admin-info-card button {
+  background: #a64e30 !important;
+  color: #ffffff !important;
+  border: 1px solid #a64e30 !important;
+  border-radius: 7px;
+}
+
+.admin-layout .admin-info-card button:hover {
+  background: #873d26 !important;
+}
+
+.admin-layout .admin-logout {
+  background: #a83f35 !important;
+  color: #ffffff !important;
+}
+
+.admin-layout .trip-status {
+  background: #354f43 !important;
+  color: #dcebd9 !important;
+}
+
+/* Responsive layout */
+
+@media (max-width: 800px) {
+  .app .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .app .cards .card:has(button) {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .app .cards .card:has(button) button {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: start;
+    margin-top: 7px;
+  }
+
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+  }
+
+  .admin-main {
+    padding: 20px;
+  }
+}
+
+/* ===== MY TRIPS: LAYOUT FIX + COLOUR ===== */
+
+.app .trips-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 16px;
+}
+
+.app .trips-list .card,
+.app .trips-list .card:has(button) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  padding: 22px;
+  background: #fffdf9;
+  border: 1px solid #dfded0;
+  border-top: 4px solid #547765;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(39, 55, 44, 0.05);
+  text-align: left;
+}
+
+.app .trips-list .card .card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 5px;
+}
+
+.app .trips-list .card h3 {
+  display: block;
+  margin: 0 0 5px;
+  color: #263e32;
+  font-size: 20px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.app .trips-list .card p {
+  display: block;
+  margin: 3px 0;
+  color: #62665e;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.app .trips-list .card p strong {
+  color: #354b3e;
+}
+
+.app .trips-list .card button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  width: auto;
+  min-height: 38px;
+  margin: 5px 8px 0 0;
+  padding: 9px 15px;
+  border: 1px solid #456654;
+  border-radius: 6px;
+  background: #365444;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.app .trips-list .card button:hover {
+  background: #263f32;
+}
+
+.app .trips-list .card button.delete-trip-btn {
+  background: #fff3f0;
+  border-color: #d9a69c;
+  color: #a13e32;
+}
+
+.app .trips-list .card button.delete-trip-btn:hover {
+  background: #fbe2dc;
+}
+
+.app .trips-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 30px 0 12px;
+}
+
+.app .trips-heading .section-title {
+  margin: 0;
+  color: #294435;
+}
+
+.app .refresh-btn {
+  padding: 10px 15px;
+  border: 1px solid #d8d3c7;
+  border-radius: 7px;
+  background: #fffdf9;
+  color: #294435;
+  cursor: pointer;
+}
+
+.app .refresh-btn:hover {
+  background: #e7eee5;
+}
+
+@media (max-width: 800px) {
+  .app .trips-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   SMART TOURIST — ADMIN DASHBOARD REFINEMENT
+   ========================================= */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #151f1a !important;
+  color: #e9eee8 !important;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+/* Sidebar */
+
+.admin-layout .admin-sidebar {
+  width: 250px;
+  min-width: 250px;
+  padding: 28px 17px;
+  background: #101914 !important;
+  border-right: 1px solid #2c3a30;
+}
+
+.admin-layout .admin-sidebar h2 {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+  margin: 0 0 7px;
+}
+
+.admin-layout .admin-sidebar > p {
+  font-size: 12px;
+  color: #9eafa1 !important;
+  margin-bottom: 32px;
+}
+
+.admin-layout .admin-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.admin-layout .admin-sidebar nav button {
+  width: 100%;
+  text-align: left;
+  padding: 13px 12px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent !important;
+  color: #c4d0c5 !important;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.admin-layout .admin-sidebar nav button:hover {
+  background: #1d2b22 !important;
+  color: #ffffff !important;
+}
+
+.admin-layout .admin-sidebar nav button.admin-nav-active {
+  background: #2b4132 !important;
+  border-color: #405b47;
+  color: #ffffff !important;
+}
+
+.admin-layout .admin-sidebar .admin-logout {
+  width: 100%;
+  margin-top: 30px;
+  padding: 11px 14px;
+  border: 1px solid #824239 !important;
+  border-radius: 7px;
+  background: #4a2925 !important;
+  color: #ffd9d2 !important;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.admin-layout .admin-sidebar .admin-logout:hover {
+  background: #69332c !important;
+}
+
+/* Main content */
+
+.admin-layout .admin-main {
+  flex: 1;
+  min-width: 0;
+  padding: 32px 34px;
+  background: #151f1a !important;
+}
+
+/* Page header */
+
+.admin-layout .admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.admin-layout .admin-header > div > p {
+  color: #a7c1a7 !important;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 8px;
+}
+
+.admin-layout .admin-header h1 {
+  color: #f1f2eb !important;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+.admin-layout .admin-header > span {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: #202d24 !important;
+  border: 1px solid #344638;
+  border-radius: 7px;
+  color: #f0f2eb !important;
+  font-size: 13px;
+}
+
+/* Compact welcome section */
+
+.admin-layout .admin-welcome {
+  padding: 23px 26px !important;
+  margin-bottom: 24px;
+  background: #202f25 !important;
+  border: 1px solid #354a39 !important;
+  border-left: 4px solid #93b58d !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  text-align: left;
+}
+
+.admin-layout .admin-welcome h2 {
+  margin: 0 0 8px;
+  color: #f3f2e9 !important;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.admin-layout .admin-welcome p {
+  margin: 0;
+  color: #b9c8b9 !important;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Statistics: compact four-column layout */
+
+.admin-layout .admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.admin-layout .admin-stat-card {
+  position: relative;
+  min-width: 0;
+  padding: 19px !important;
+  background: #202b24 !important;
+  border: 1px solid #344238 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  text-align: left;
+}
+
+.admin-layout .admin-stat-card > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 17px;
+  border-radius: 7px;
+  background: #304638;
+  font-size: 17px;
+}
+
+.admin-layout .admin-stat-card p {
+  margin: 0 0 7px;
+  color: #b5c2b6 !important;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.admin-layout .admin-stat-card h2 {
+  margin: 0;
+  color: #f4f3eb !important;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.admin-layout .admin-stat-card:hover {
+  border-color: #66806a !important;
+  background: #25352a !important;
+}
+
+/* Incident status cards: use subtle status colours */
+
+.admin-layout .admin-stats:nth-of-type(3) .admin-stat-card:nth-child(1) > span {
+  background: #493b27;
+}
+
+.admin-layout .admin-stats:nth-of-type(3) .admin-stat-card:nth-child(2) > span {
+  background: #293d49;
+}
+
+.admin-layout .admin-stats:nth-of-type(3) .admin-stat-card:nth-child(3) > span {
+  background: #294535;
+}
+
+/* Quick management panel */
+
+.admin-layout .admin-info-card {
+  margin-top: 20px;
+  padding: 24px !important;
+  background: #1c2921 !important;
+  border: 1px solid #344638 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.admin-layout .admin-info-card h2 {
+  margin: 0 0 8px;
+  color: #f0f2eb !important;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.admin-layout .admin-info-card > p {
+  color: #b5c2b6 !important;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Management actions */
+
+.admin-layout .admin-info-card button {
+  margin: 12px 10px 0 0;
+  padding: 10px 14px;
+  border: 1px solid #4a6851 !important;
+  border-radius: 6px;
+  background: #304938 !important;
+  color: #f4f5ed !important;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.admin-layout .admin-info-card button:hover {
+  background: #405d46 !important;
+}
+
+/* Tables */
+
+.admin-layout .admin-info-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.admin-layout .admin-info-card th {
+  padding: 13px 15px;
+  background: #293b2e !important;
+  color: #e8eee5 !important;
+  text-align: left;
+  font-weight: 650;
+}
+
+.admin-layout .admin-info-card td {
+  padding: 14px 15px;
+  color: #d4ded3 !important;
+  border-bottom: 1px solid #344238 !important;
+}
+
+.admin-layout .admin-info-card tbody tr:hover {
+  background: #26362b !important;
+}
+
+/* Admin forms */
+
+.admin-layout .admin-info-card input,
+.admin-layout .admin-info-card select,
+.admin-layout .admin-info-card textarea {
+  width: 100%;
+  padding: 11px 12px;
+  background: #151f1a !important;
+  color: #edf1e9 !important;
+  border: 1px solid #405344 !important;
+  border-radius: 6px;
+}
+
+.admin-layout .admin-info-card input:focus,
+.admin-layout .admin-info-card select:focus,
+.admin-layout .admin-info-card textarea:focus {
+  outline: 2px solid #66866a;
+  outline-offset: 1px;
+}
+
+/* Mobile and smaller screens */
+
+@media (max-width: 1100px) {
+  .admin-layout .admin-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-layout .admin-main {
+    padding: 25px 22px;
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-layout .admin-sidebar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .admin-layout .admin-sidebar nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-layout .admin-main {
+    padding: 20px 14px;
+  }
+
+  .admin-layout .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-layout .admin-header h1 {
+    font-size: 23px;
+  }
+}
+
+/* ===== MY TRIPS: DEFINITIVE LAYOUT FIX ===== */
+
+.app .cards.trips-list {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 14px !important;
+  margin-top: 18px;
+  align-items: stretch;
+}
+
+/* Override all previous card grid rules */
+.app .cards.trips-list > .card,
+.app .cards.trips-list > .card:has(button) {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  padding: 22px 24px !important;
+  margin: 0 !important;
+  background: #fffdf9 !important;
+  border: 1px solid #e5dfd3 !important;
+  border-left: 4px solid #547765 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 3px 12px rgba(39, 55, 44, 0.04) !important;
+  text-align: left !important;
+  box-sizing: border-box;
+}
+
+/* Destination icon */
+.app .cards.trips-list > .card .card-icon {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  margin: 0 0 5px !important;
+  border-radius: 9px;
+  background: #e3eadb;
+}
+
+/* Destination name */
+.app .cards.trips-list > .card h3 {
+  display: block !important;
+  width: 100%;
+  margin: 0 0 5px !important;
+  color: #294435 !important;
+  font-size: 21px !important;
+  line-height: 1.4 !important;
+  overflow-wrap: anywhere;
+}
+
+/* Status, start date, return date */
+.app .cards.trips-list > .card p {
+  display: block !important;
+  width: 100%;
+  min-height: 0 !important;
+  margin: 0 !important;
+  color: #62665e !important;
+  font-size: 14px !important;
+  line-height: 1.8 !important;
+  overflow-wrap: anywhere;
+  white-space: normal !important;
+}
+
+.app .cards.trips-list > .card p strong {
+  display: inline-block;
+  min-width: 125px;
+  color: #354f43 !important;
+}
+
+/* Trip action buttons */
+.app .cards.trips-list > .card button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start !important;
+  width: auto !important;
+  min-height: 38px;
+  margin: 10px 8px 0 0 !important;
+  padding: 9px 15px !important;
+  border: 1px solid #354f43 !important;
+  border-radius: 6px !important;
+  background: #354f43 !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  white-space: normal !important;
+  cursor: pointer;
+}
+
+.app .cards.trips-list > .card button:hover {
+  background: #263d32 !important;
+}
+
+/* Delete should be visibly different */
+.app .cards.trips-list > .card button.delete-trip-btn {
+  background: #fff3f0 !important;
+  color: #a13e32 !important;
+  border-color: #d9a69c !important;
+}
+
+.app .cards.trips-list > .card button.delete-trip-btn:hover {
+  background: #fbe2dc !important;
+}
+
+/* Refresh heading */
+.app .trips-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0 12px;
+}
+
+.app .trips-heading .section-title {
+  margin: 0 !important;
+}
+
+@media (max-width: 600px) {
+  .app .cards.trips-list > .card {
+    padding: 18px !important;
+  }
+
+  .app .cards.trips-list > .card p strong {
+    min-width: 0;
+  }
+}
+
+/* ===== SMART TOURIST: COLOUR & DETAIL UPGRADE ===== */
+
+/* Main travel page */
+.app {
+  --forest: #354f43;
+  --terracotta: #c15b38;
+  --mustard: #e9b949;
+  --mint: #dcece5;
+  --cream: #f7f1e7;
+  --ink: #292b25;
+  --line: #e3d9c9;
+}
+
+/* Sidebar: warm, with a golden active marker */
+.app .sidebar {
+  border-right-color: #e6d8c4;
+}
+
+.app .nav-item.active {
+  background: var(--forest) !important;
+  border-left: 4px solid var(--mustard);
+}
+
+.app .nav-item:not(.active):hover {
+  background: #e9e6d9 !important;
+  color: var(--forest) !important;
+}
+
+/* Primary actions: sunset terracotta */
+.app .hero button,
+.app .hero .primary-btn,
+.app .primary-btn,
+.app .auth-submit {
+  background: var(--terracotta) !important;
+  border-color: var(--terracotta) !important;
+  color: #ffffff !important;
+}
+
+.app .hero button:hover,
+.app .primary-btn:hover,
+.app .auth-submit:hover {
+  background: #a8492d !important;
+  border-color: #a8492d !important;
+}
+
+/* Give content panels a little more character */
+.app .content-panel,
+.app .incident-panel {
+  border-top: 3px solid #d8a65b;
+}
+
+/* Cards: subtle colourful top accents */
+.app .cards .card {
+  border-color: var(--line);
+  transition: border-color 0.18s ease,
+              background-color 0.18s ease;
+}
+
+.app .cards .card:hover {
+  border-color: #9ab5a0 !important;
+  background-color: #fffaf1 !important;
+  box-shadow: none !important;
+}
+
+/* Soft colours behind existing icons */
+.app .cards .card:nth-child(4n + 1) .card-icon {
+  background: #e0ead8;
+}
+
+.app .cards .card:nth-child(4n + 2) .card-icon {
+  background: #f8dfd2;
+}
+
+.app .cards .card:nth-child(4n + 3) .card-icon {
+  background: #dcebf1;
+}
+
+.app .cards .card:nth-child(4n + 4) .card-icon {
+  background: #f7ebc7;
+}
+
+/* Search and form fields */
+.app input:focus,
+.app select:focus,
+.app textarea:focus {
+  border-color: #648b70 !important;
+  box-shadow: 0 0 0 3px rgba(100, 139, 112, 0.14) !important;
+  outline: none;
+}
+
+/* Helpful links */
+.app a:not(.nav-item) {
+  text-decoration-color: #d5a06d;
+  text-underline-offset: 3px;
+}
+
+.app a:not(.nav-item):hover {
+  color: var(--terracotta);
+}
+
+/* Sign out: clearly destructive */
+.app .logout-btn {
+  background: #b34338 !important;
+  color: #ffffff !important;
+  border-color: #b34338 !important;
+}
+
+.app .logout-btn:hover {
+  background: #91352d !important;
+}
+
+/* ===== DARK ADMIN: SAGE + AMBER ACCENTS ===== */
+
+.admin-layout .admin-header > div > p {
+  color: #e9b949 !important;
+}
+
+.admin-layout .admin-welcome {
+  border-left-color: #e9b949 !important;
+}
+
+.admin-layout .admin-stat-card {
+  border-top: 3px solid #648b70 !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(2) {
+  border-top-color: #d58a5b !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(3) {
+  border-top-color: #77a9bc !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(4) {
+  border-top-color: #d4b76a !important;
+}
+
+.admin-layout .admin-sidebar nav button.admin-nav-active {
+  border-left: 3px solid #e9b949 !important;
+}
+
+.admin-layout .admin-info-card button {
+  background: #3d624b !important;
+  border-color: #587b61 !important;
+}
+
+.admin-layout .admin-info-card button:hover {
+  background: #4c7759 !important;
+}
+
+.admin-layout .admin-sidebar .admin-logout {
+  background: #7d342d !important;
+  border-color: #a14a3e !important;
+}
+
+/* Keep all hover effects subtle */
+.app button,
+.admin-layout button {
+  transition: background-color 0.18s ease,
+              border-color 0.18s ease;
+}
+
+/* ===== SMART TOURIST: PREMIUM HOMEPAGE UPGRADE ===== */
+
+.app {
+  --travel-green: #354f43;
+  --travel-orange: #c15b38;
+  --travel-gold: #e9b949;
+  --travel-cream: #f7f1e7;
+  --travel-border: #e6ddcf;
+}
+
+/* Softer page background */
+.app {
+  background-color: #f7f3ec;
+}
+
+.app .sidebar {
+  background: linear-gradient(180deg, #f3ede2 0%, #eee7d9 100%);
+  border-right: 1px solid #e4d8c7;
+}
+
+/* Sidebar navigation */
+.app .nav-item {
+  border-radius: 12px;
+  transition: background-color 0.2s ease,
+              color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.app .nav-item:not(.active):hover {
+  background: #e3e9df;
+  color: #354f43;
+  transform: translateX(3px);
+}
+
+.app .nav-item.active {
+  background: #354f43;
+  color: #ffffff;
+  box-shadow: 0 5px 14px rgba(53, 79, 67, 0.14);
+  border-left: 4px solid #e9b949;
+}
+
+/* Main page headings */
+.app h1,
+.app h2 {
+  color: #294538;
+  letter-spacing: -0.6px;
+}
+
+/* Homepage hero image */
+.app .hero {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 14px 32px rgba(38, 54, 43, 0.14);
+  transition: box-shadow 0.25s ease;
+}
+
+.app .hero:hover {
+  box-shadow: 0 18px 38px rgba(38, 54, 43, 0.2);
+}
+
+/* Main action buttons */
+.app .hero button,
+.app .primary-btn,
+.app .auth-submit {
+  background: linear-gradient(135deg, #cf6844, #b94f30);
+  border: 1px solid #b94f30;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(185, 79, 48, 0.18);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              background 0.2s ease;
+}
+
+.app .hero button:hover,
+.app .primary-btn:hover,
+.app .auth-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(185, 79, 48, 0.25);
+}
+
+/* Cards across the dashboard */
+.app .cards .card {
+  border: 1px solid #e6ddcf;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(49, 57, 43, 0.035);
+  transition: transform 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.app .cards .card:hover {
+  transform: translateY(-3px);
+  border-color: #a8bba7;
+  box-shadow: 0 9px 22px rgba(49, 74, 56, 0.09);
+}
+
+/* Different gentle colours for card icons */
+.app .cards .card:nth-child(4n + 1) .card-icon {
+  background: #e0ead8;
+}
+
+.app .cards .card:nth-child(4n + 2) .card-icon {
+  background: #f8dfd2;
+}
+
+.app .cards .card:nth-child(4n + 3) .card-icon {
+  background: #dcebf1;
+}
+
+.app .cards .card:nth-child(4n + 4) .card-icon {
+  background: #f7ebc7;
+}
+
+/* Form focus states */
+.app input:focus,
+.app select:focus,
+.app textarea:focus {
+  border-color: #648b70;
+  box-shadow: 0 0 0 3px rgba(100, 139, 112, 0.14);
+  outline: none;
+}
+
+/* Clear keyboard focus */
+.app button:focus-visible,
+.app a:focus-visible {
+  outline: 3px solid #d8ae4b;
+  outline-offset: 3px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .app *,
+  .admin-layout * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* =========================================
+   COLORFUL ADVENTURE HOMEPAGE
+   ========================================= */
+
+.app .adventure-home {
+  --adventure-ink: #243c32;
+  --adventure-coral: #f07855;
+  --adventure-teal: #147d83;
+  --adventure-line: #e7dfd2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Hero banner */
+.app .adventure-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 360px;
+  padding: 48px;
+  overflow: hidden;
+  border-radius: 24px;
+  color: #fff;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 48, 44, 0.88) 0%,
+      rgba(18, 48, 44, 0.65) 48%,
+      rgba(18, 48, 44, 0.08) 100%
+    ),
+    url("/travel-landscape.jpg") center 52% / cover no-repeat;
+  box-shadow: 0 15px 32px rgba(37, 65, 51, 0.14);
+}
+
+.app .adventure-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 570px;
+}
+
+.app .adventure-eyebrow,
+.app .adventure-kicker {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.app .adventure-eyebrow {
+  color: #ffd09a;
+}
+
+.app .adventure-hero h2 {
+  max-width: 540px;
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.app .adventure-hero p {
+  max-width: 440px;
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.91);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.app .adventure-primary-btn,
+.app .adventure-spotlight-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app .adventure-primary-btn {
+  color: #fff;
+  background: #ed704d;
+  box-shadow: 0 6px 16px rgba(120, 48, 28, 0.2);
+}
+
+.app .adventure-primary-btn:hover {
+  background: #d95c3b;
+  transform: translateY(-2px);
+  box-shadow: 0 9px 20px rgba(120, 48, 28, 0.26);
+}
+
+.app .adventure-hero-badge {
+  position: absolute;
+  right: 28px;
+  bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  color: #fff;
+  background: rgba(29, 55, 47, 0.76);
+  backdrop-filter: blur(10px);
+}
+
+.app .adventure-hero-badge > span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 12px;
+  color: #294d42;
+  background: #f9cc70;
+  font-size: 22px;
+}
+
+.app .adventure-hero-badge strong,
+.app .adventure-hero-badge small {
+  display: block;
+}
+
+.app .adventure-hero-badge strong {
+  font-size: 13px;
+}
+
+.app .adventure-hero-badge small {
+  margin-top: 4px;
+  color: #e4e8dd;
+  font-size: 11px;
+}
+
+/* Section heading */
+.app .adventure-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.app .adventure-kicker {
+  margin-bottom: 8px;
+  color: #c05b3b;
+}
+
+.app .adventure-section-heading h2 {
+  margin: 0;
+  color: var(--adventure-ink);
+  font-size: 29px;
+  letter-spacing: -0.8px;
+}
+
+.app .adventure-section-heading p {
+  margin: 8px 0 0;
+  color: #77776f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Quick access grid */
+.app .adventure-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.app .adventure-quick-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 205px;
+  padding: 23px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 19px;
+  color: #293b32;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app .adventure-quick-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(39, 57, 45, 0.1);
+}
+
+.app .adventure-card-coral {
+  background: #ffebe2;
+  border-color: #f5d4c5;
+}
+
+.app .adventure-card-blue {
+  background: #e3f1f6;
+  border-color: #cce4ed;
+}
+
+.app .adventure-card-yellow {
+  background: #fff2cf;
+  border-color: #f0e1b3;
+}
+
+.app .adventure-card-mint {
+  background: #e2f0e5;
+  border-color: #cfe4d3;
+}
+
+.app .adventure-card-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 15px;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.76);
+  font-size: 23px;
+}
+
+.app .adventure-card-label {
+  margin-bottom: 7px;
+  color: #6c7369;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.app .adventure-quick-card strong {
+  max-width: calc(100% - 20px);
+  color: #293b32;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.app .adventure-quick-card small {
+  max-width: calc(100% - 10px);
+  margin-top: 7px;
+  color: #606b63;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.app .adventure-card-arrow {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  color: #3e6251;
+  font-size: 22px;
+}
+
+/* Destination spotlight */
+.app .adventure-spotlight {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--adventure-line);
+  border-radius: 22px;
+  background: #fffaf2;
+}
+
+.app .adventure-spotlight-image {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: 280px;
+  padding: 20px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(19, 46, 39, 0.04),
+      rgba(19, 46, 39, 0.28)
+    ),
+    url("/travel-landscape.jpg") center / cover no-repeat;
+}
+
+.app .adventure-spotlight-tag {
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  color: #fff;
+  background: rgba(31, 59, 48, 0.76);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.app .adventure-spotlight-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  padding: 30px;
+}
+
+.app .adventure-spotlight-content h2 {
+  margin: 0 0 12px;
+  color: #294538;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.app .adventure-spotlight-content > p {
+  margin: 0 0 15px;
+  color: #71736a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.app .adventure-spotlight-content .adventure-spotlight-location {
+  color: #3f776c;
+  font-weight: 650;
+}
+
+.app .adventure-spotlight-btn {
+  margin-top: 5px;
+  color: #fff;
+  background: #147d83;
+}
+
+.app .adventure-spotlight-btn:hover {
+  background: #10676c;
+  transform: translateY(-2px);
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+  .app .adventure-hero {
+    min-height: 330px;
+    padding: 32px;
+  }
+
+  .app .adventure-hero-badge {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .app .adventure-spotlight {
+    grid-template-columns: 1fr;
+  }
+
+  .app .adventure-spotlight-image {
+    min-height: 230px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app .adventure-home {
+    gap: 22px;
+  }
+
+  .app .adventure-hero {
+    min-height: 400px;
+    padding: 25px 22px 110px;
+    border-radius: 18px;
+    background-position: center;
+  }
+
+  .app .adventure-hero h2 {
+    font-size: 35px;
+  }
+
+  .app .adventure-hero p {
+    font-size: 14px;
+  }
+
+  .app .adventure-hero-badge {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .app .adventure-section-heading h2 {
+    font-size: 25px;
+  }
+
+  .app .adventure-quick-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .app .adventure-quick-card {
+    min-height: 180px;
+    padding: 20px;
+  }
+
+  .app .adventure-spotlight-content {
+    padding: 24px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app .adventure-quick-card,
+  .app .adventure-primary-btn,
+  .app .adventure-spotlight-btn {
+    transition: none;
+  }
+}
+
+/* Keep sidebar and Sign Out fixed while page content scrolls */
+.app .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.app .sidebar nav {
+  flex: 1;
+}
+
+.app .sidebar-bottom {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+/* Main content scrolls independently of sidebar */
+.app .main-content {
+  margin-left: 300px;
+  min-width: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .app .sidebar {
+    width: 220px;
+  }
+
+  .app .main-content {
+    margin-left: 220px;
+  }
+}
+
+/* Position Discover Destinations at the bottom-right */
+.app .adventure-hero-content {
+  width: 100%;
+  max-width: none;
+  text-align: center;
+}
+
+.app .adventure-hero-content .adventure-primary-btn {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .app .adventure-hero-content .adventure-primary-btn {
+    right: 18px;
+    bottom: 18px;
+  }
+}
+
+/* =====================================
+   SMART TOURIST ADMIN - LIGHT THEME
+   ===================================== */
+
+.admin-layout {
+  background: #f6f4ee !important;
+  color: #293d32 !important;
+}
+
+/* Sidebar */
+.admin-layout .admin-sidebar {
+  background: #fffdf8 !important;
+  border-right: 1px solid #e6e0d5 !important;
+  box-shadow: 3px 0 16px rgba(45, 62, 48, 0.04);
+}
+
+.admin-layout .admin-sidebar h2,
+.admin-layout .admin-sidebar p {
+  color: #354f43 !important;
+}
+
+.admin-layout .admin-sidebar nav button {
+  color: #4d5d51 !important;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.admin-layout .admin-sidebar nav button:hover {
+  background: #edf3eb !important;
+  color: #294b39 !important;
+}
+
+.admin-layout .admin-sidebar nav button.admin-nav-active {
+  background: #dfece0 !important;
+  color: #294b39 !important;
+  border-left: 4px solid #e9b949 !important;
+}
+
+/* Main area and headings */
+.admin-layout .admin-main {
+  background: #f6f4ee !important;
+  color: #293d32 !important;
+}
+
+.admin-layout .admin-header h1,
+.admin-layout .admin-main h1,
+.admin-layout .admin-main h2,
+.admin-layout .admin-main h3 {
+  color: #294538 !important;
+}
+
+.admin-layout .admin-header p {
+  color: #778176 !important;
+}
+
+/* Welcome banner */
+.admin-layout .admin-welcome {
+  background: #e3eee2 !important;
+  color: #294538 !important;
+  border: 1px solid #d0e1cf !important;
+  border-left: 5px solid #e9b949 !important;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(45, 62, 48, 0.04);
+}
+
+.admin-layout .admin-welcome h2,
+.admin-layout .admin-welcome p {
+  color: #294538 !important;
+}
+
+/* Statistic cards */
+.admin-layout .admin-stat-card {
+  background: #ffffff !important;
+  color: #293d32 !important;
+  border: 1px solid #e5e5dc !important;
+  border-top: 4px solid #709b7b !important;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(40, 58, 44, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 2) {
+  border-top-color: #df8b65 !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 3) {
+  border-top-color: #76adbf !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 4) {
+  border-top-color: #d8b957 !important;
+}
+
+.admin-layout .admin-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 20px rgba(40, 58, 44, 0.09);
+}
+
+.admin-layout .admin-stat-card h2,
+.admin-layout .admin-stat-card h3,
+.admin-layout .admin-stat-card p,
+.admin-layout .admin-stat-card strong {
+  color: #34493b !important;
+}
+
+/* Management panels */
+.admin-layout .admin-info-card {
+  background: #ffffff !important;
+  color: #35473a !important;
+  border: 1px solid #e5e1d8 !important;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(40, 58, 44, 0.04);
+}
+
+.admin-layout .admin-info-card h2,
+.admin-layout .admin-info-card h3,
+.admin-layout .admin-info-card p {
+  color: #35473a !important;
+}
+
+/* Tables and form fields */
+.admin-layout table {
+  background: #ffffff;
+  color: #35473a;
+  border-color: #e5e1d8;
+}
+
+.admin-layout th {
+  background: #edf3eb;
+  color: #354f43;
+}
+
+.admin-layout td {
+  border-color: #ece8df;
+}
+
+.admin-layout input,
+.admin-layout select,
+.admin-layout textarea {
+  background: #ffffff !important;
+  color: #293d32 !important;
+  border: 1px solid #d9ded4 !important;
+  border-radius: 8px;
+}
+
+.admin-layout input:focus,
+.admin-layout select:focus,
+.admin-layout textarea:focus {
+  border-color: #709b7b !important;
+  outline: 3px solid rgba(112, 155, 123, 0.15);
+}
+
+/* Buttons */
+.admin-layout .admin-info-card button {
+  background: #426b50 !important;
+  color: #ffffff !important;
+  border: 1px solid #426b50 !important;
+  border-radius: 8px;
+}
+
+.admin-layout .admin-info-card button:hover {
+  background: #31573e !important;
+}
+
+.admin-layout .admin-sidebar .admin-logout {
+  background: #f8e4df !important;
+  color: #a63d32 !important;
+  border: 1px solid #edc7be !important;
+  border-radius: 10px;
+}
+
+.admin-layout .admin-sidebar .admin-logout:hover {
+  background: #f2d5ce !important;
+}
+
+/* ==========================================
+   SMART TOURIST ADMIN - MIDNIGHT FOREST THEME
+   ========================================== */
+
+.admin-layout {
+  background: #111b18 !important;
+  color: #edf4ef !important;
+}
+
+/* Admin sidebar */
+.admin-layout .admin-sidebar {
+  background: #17231e !important;
+  color: #edf4ef !important;
+  border-right: 1px solid #2b3d33 !important;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.16);
+}
+
+.admin-layout .admin-sidebar h2,
+.admin-layout .admin-sidebar p {
+  color: #e6eee8 !important;
+}
+
+.admin-layout .admin-sidebar nav button {
+  background: transparent !important;
+  color: #b8c9be !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.admin-layout .admin-sidebar nav button:hover {
+  background: #24372d !important;
+  color: #ffffff !important;
+}
+
+.admin-layout .admin-sidebar nav button.admin-nav-active {
+  background: #2b4435 !important;
+  color: #ffffff !important;
+  border: 1px solid #54785c !important;
+  border-left: 4px solid #e8b84d !important;
+}
+
+/* Main content */
+.admin-layout .admin-main {
+  background: #111b18 !important;
+  color: #edf4ef !important;
+}
+
+.admin-layout .admin-header h1,
+.admin-layout .admin-main h1,
+.admin-layout .admin-main h2,
+.admin-layout .admin-main h3 {
+  color: #f2f6f2 !important;
+}
+
+.admin-layout .admin-header p {
+  color: #a8b9ae !important;
+}
+
+/* Welcome banner */
+.admin-layout .admin-welcome {
+  background: linear-gradient(120deg, #243d30, #1b2c24) !important;
+  color: #f3f7f3 !important;
+  border: 1px solid #395844 !important;
+  border-left: 5px solid #e8b84d !important;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.admin-layout .admin-welcome h2,
+.admin-layout .admin-welcome p {
+  color: #f3f7f3 !important;
+}
+
+/* Statistics cards */
+.admin-layout .admin-stat-card {
+  background: #1c2a23 !important;
+  color: #f3f7f3 !important;
+  border: 1px solid #304438 !important;
+  border-top: 4px solid #57b77b !important;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.13);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 2) {
+  border-top-color: #e88c69 !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 3) {
+  border-top-color: #55b8c7 !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 4) {
+  border-top-color: #e8b84d !important;
+}
+
+.admin-layout .admin-stat-card:hover {
+  transform: translateY(-3px);
+  border-color: #506b58 !important;
+}
+
+.admin-layout .admin-stat-card h2,
+.admin-layout .admin-stat-card h3,
+.admin-layout .admin-stat-card p,
+.admin-layout .admin-stat-card strong {
+  color: #edf4ef !important;
+}
+
+/* Management panels and tables */
+.admin-layout .admin-info-card {
+  background: #1b2922 !important;
+  color: #edf4ef !important;
+  border: 1px solid #34483b !important;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.admin-layout .admin-info-card h2,
+.admin-layout .admin-info-card h3,
+.admin-layout .admin-info-card p {
+  color: #edf4ef !important;
+}
+
+.admin-layout table {
+  width: 100%;
+  background: #1a2922 !important;
+  color: #edf4ef !important;
+  border-color: #3a5143 !important;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.admin-layout th {
+  background: #263b2f !important;
+  color: #f4f7f4 !important;
+  border-bottom: 1px solid #405848 !important;
+}
+
+.admin-layout td {
+  background: #1a2922 !important;
+  color: #dce8df !important;
+  border-bottom: 1px solid #2c4035 !important;
+}
+
+.admin-layout tr:hover td {
+  background: #23372b !important;
+}
+
+/* Inputs and dropdowns */
+.admin-layout input,
+.admin-layout select,
+.admin-layout textarea {
+  background: #17241d !important;
+  color: #f3f7f3 !important;
+  border: 1px solid #405748 !important;
+  border-radius: 8px;
+}
+
+.admin-layout input::placeholder,
+.admin-layout textarea::placeholder {
+  color: #9aafa0 !important;
+}
+
+.admin-layout input:focus,
+.admin-layout select:focus,
+.admin-layout textarea:focus {
+  border-color: #69a77b !important;
+  outline: 3px solid rgba(105, 167, 123, 0.15);
+}
+
+/* Management buttons */
+.admin-layout .admin-info-card button {
+  background: #386b4a !important;
+  color: #ffffff !important;
+  border: 1px solid #4b825d !important;
+  border-radius: 8px;
+}
+
+.admin-layout .admin-info-card button:hover {
+  background: #477e58 !important;
+}
+
+/* Sign out */
+.admin-layout .admin-sidebar .admin-logout {
+  background: #3a2422 !important;
+  color: #ffb6a8 !important;
+  border: 1px solid #70413a !important;
+  border-radius: 10px;
+}
+
+.admin-layout .admin-sidebar .admin-logout:hover {
+  background: #4b2c28 !important;
+}
+
+/* =========================================
+   ADMIN DASHBOARD - SOFT COLOUR THEME
+   ========================================= */
+
+.admin-layout {
+  background: #f2f3f8 !important;
+  color: #303b4b !important;
+}
+
+/* Sidebar */
+.admin-layout .admin-sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid #e8eaf0 !important;
+  box-shadow: 3px 0 18px rgba(48, 59, 75, 0.035);
+}
+
+.admin-layout .admin-sidebar h2 {
+  color: #33445c !important;
+}
+
+.admin-layout .admin-sidebar p {
+  color: #778398 !important;
+}
+
+.admin-layout .admin-sidebar nav button {
+  background: transparent !important;
+  color: #68758a !important;
+  border: none !important;
+  border-radius: 9px;
+  margin-bottom: 5px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.admin-layout .admin-sidebar nav button:hover {
+  background: #f0f1fa !important;
+  color: #514b87 !important;
+}
+
+.admin-layout .admin-sidebar nav button.admin-nav-active {
+  background: #e9e8fa !important;
+  color: #514b87 !important;
+  border: none !important;
+  border-left: 4px solid #8175d5 !important;
+  font-weight: 600;
+}
+
+/* Main area */
+.admin-layout .admin-main {
+  background: #f2f3f8 !important;
+  color: #303b4b !important;
+}
+
+.admin-layout .admin-header h1,
+.admin-layout .admin-main h1,
+.admin-layout .admin-main h2,
+.admin-layout .admin-main h3 {
+  color: #303e52 !important;
+}
+
+.admin-layout .admin-header p {
+  color: #818ba0 !important;
+}
+
+/* Welcome section - soft lavender */
+.admin-layout .admin-welcome {
+  background: #e7e8f8 !important;
+  color: #3e4669 !important;
+  border: none !important;
+  border-left: 4px solid #8175d5 !important;
+  border-radius: 12px;
+  box-shadow: none !important;
+}
+
+.admin-layout .admin-welcome h2,
+.admin-layout .admin-welcome p {
+  color: #3e4669 !important;
+}
+
+/* Statistics - lighter, less boxy */
+.admin-layout .admin-stat-card {
+  background: #ffffff !important;
+  color: #303b4b !important;
+  border: none !important;
+  border-top: 3px solid #72ad91 !important;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(48, 59, 75, 0.045) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 2) {
+  border-top-color: #e89a83 !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 3) {
+  border-top-color: #76b9c8 !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 4) {
+  border-top-color: #e5bf64 !important;
+}
+
+.admin-layout .admin-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(48, 59, 75, 0.08) !important;
+}
+
+.admin-layout .admin-stat-card h2,
+.admin-layout .admin-stat-card h3,
+.admin-layout .admin-stat-card p,
+.admin-layout .admin-stat-card strong {
+  color: #39475a !important;
+}
+
+/* Management sections */
+.admin-layout .admin-info-card {
+  background: #ffffff !important;
+  color: #39475a !important;
+  border: none !important;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(48, 59, 75, 0.04) !important;
+}
+
+.admin-layout .admin-info-card h2,
+.admin-layout .admin-info-card h3,
+.admin-layout .admin-info-card p {
+  color: #39475a !important;
+}
+
+/* Tables */
+.admin-layout table {
+  background: #ffffff !important;
+  color: #39475a !important;
+  border: none !important;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-layout th {
+  background: #eeeff8 !important;
+  color: #4e5678 !important;
+  border-bottom: 1px solid #e4e6ef !important;
+}
+
+.admin-layout td {
+  background: #ffffff !important;
+  color: #536176 !important;
+  border-bottom: 1px solid #f0f1f5 !important;
+}
+
+.admin-layout tr:hover td {
+  background: #f8f8fd !important;
+}
+
+/* Form fields */
+.admin-layout input,
+.admin-layout select,
+.admin-layout textarea {
+  background: #ffffff !important;
+  color: #39475a !important;
+  border: 1px solid #dfe3ed !important;
+  border-radius: 8px;
+}
+
+.admin-layout input:focus,
+.admin-layout select:focus,
+.admin-layout textarea:focus {
+  border-color: #9187d9 !important;
+  outline: 3px solid rgba(129, 117, 213, 0.12);
+}
+
+/* Buttons */
+.admin-layout .admin-info-card button {
+  background: #6259a7 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px;
+}
+
+.admin-layout .admin-info-card button:hover {
+  background: #51488f !important;
+}
+
+/* Sign out */
+.admin-layout .admin-sidebar .admin-logout {
+  background: #fff0ed !important;
+  color: #bd6558 !important;
+  border: 1px solid #f4d8d2 !important;
+  border-radius: 9px;
+}
+
+.admin-layout .admin-sidebar .admin-logout:hover {
+  background: #ffe3de !important;
+}
+
+
+/* FIX: READABLE ADMIN MANAGEMENT TABLES */
+
+/* Light surface for the panel directly containing a table */
+.admin-layout .admin-main div:has(> table) {
+  background: #ffffff !important;
+  color: #344256 !important;
+  border-color: #e4e5ef !important;
+  box-shadow: 0 4px 18px rgba(50, 60, 80, 0.05);
+}
+
+/* Make table headings readable */
+.admin-layout .admin-main table th {
+  background: #e9e8f8 !important;
+  color: #45436f !important;
+  border-bottom: 1px solid #deddf0 !important;
+}
+
+/* Make all table data readable */
+.admin-layout .admin-main table td {
+  background: #ffffff !important;
+  color: #3c495b !important;
+  border-bottom: 1px solid #e9ebf1 !important;
+}
+
+/* Subtle row hover */
+.admin-layout .admin-main table tbody tr:hover td {
+  background: #f5f5fc !important;
+}
+
+/* Fix headings and descriptions above management tables */
+.admin-layout .admin-main div:has(> table) h2,
+.admin-layout .admin-main div:has(> table) h3,
+.admin-layout .admin-main div:has(> table) p {
+  color: #344256 !important;
+}
+
+/* Keep role/status labels colourful */
+.admin-layout .admin-main table td span {
+  font-weight: 600;
+}
+
+/* Remove the old dark-green panel appearance */
+.admin-layout .admin-main div:has(> table) {
+  border-radius: 12px;
+}
+
+/* ADMIN WELCOME BANNER - FORCE LIGHT THEME */
+.admin-layout .admin-main .admin-welcome,
+.admin-layout .admin-main > section:first-of-type {
+  background: linear-gradient(110deg, #eeebff, #e7f2ec) !important;
+  color: #35415a !important;
+  border: none !important;
+  border-left: 5px solid #8175d5 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+}
+
+.admin-layout .admin-main .admin-welcome h2,
+.admin-layout .admin-main .admin-welcome p,
+.admin-layout .admin-main > section:first-of-type h2,
+.admin-layout .admin-main > section:first-of-type p {
+  color: #35415a !important;
+}
+
+/* ADMIN STATISTICS - COLOURFUL DETAILS */
+.admin-layout .admin-stat-card {
+  position: relative;
+  overflow: hidden;
+  border-top: none !important;
+  border-radius: 13px !important;
+  padding: 24px !important;
+  box-shadow: 0 4px 16px rgba(53, 65, 90, 0.05) !important;
+}
+
+/* Pastel icon backgrounds */
+.admin-layout .admin-stat-card > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #e4f3e9;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 2) > span {
+  background: #ffebe5;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 3) > span {
+  background: #e2f3f8;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 4) > span {
+  background: #fff2d6;
+}
+
+/* Accent colours for the numbers */
+.admin-layout .admin-stat-card h2 {
+  color: #438362 !important;
+  font-size: 34px !important;
+  font-weight: 750;
+  margin-top: 8px;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 2) h2 {
+  color: #ce765f !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 3) h2 {
+  color: #3996aa !important;
+}
+
+.admin-layout .admin-stat-card:nth-child(4n + 4) h2 {
+  color: #b58b2d !important;
+}
+
+.admin-layout .admin-stat-card p {
+  color: #758196 !important;
+  font-size: 14px;
+}
+
+.admin-layout .admin-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 22px rgba(53, 65, 90, 0.09) !important;
+}
